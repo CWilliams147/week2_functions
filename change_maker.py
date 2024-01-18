@@ -60,6 +60,3 @@ change = (
     (1, 0, 0, 0, 1, 0), 
     (1, 0, 0, 2)
     )
-
-result = value_of_change(change)
-print(result)
