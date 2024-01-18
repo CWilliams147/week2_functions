@@ -13,8 +13,6 @@ def make_change(total_charge, payment):
     coins = parts[1]
     return count_bills(bills), count_coins(coins)
 
-    
-
 
 def count_bills(payment_in_bills):
     payment_in_bills = int(payment_in_bills)
@@ -32,8 +30,6 @@ def count_bills(payment_in_bills):
     singles = payment_in_bills // 1
     payment_in_bills %= 1
     return(singles, fives, tens, twenties, fifties, hundreds)
-    
-    
 
 
 def count_coins(payment_in_coins):
@@ -49,14 +45,16 @@ def count_coins(payment_in_coins):
     return (pennies, nickels, dimes, quarters)
 
 
-print(make_change(148.49, 200))
-
 def value_of_change(change):
-    total = sum(count_bills(change[0])) + sum(count_coins([1]))
-    return round(total, 2)
-
+    change = payment_in_bills, payment_in_coins
+    return payment_in_bills + payment_in_coins /100
+tuple_value=(148, 49)
+end_value = value_of_change(tuple_value)
 
 change = (
     (1, 0, 0, 0, 1, 0), 
     (1, 0, 0, 2)
     )
+    
+print(make_change(148.49, 200))
+print(end_value)
